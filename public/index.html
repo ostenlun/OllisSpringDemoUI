@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<!-- 
+Provide a page in the application which allows the user to call the TFL API and displays 
+the response of the API call
+Provide a second page in the application which displays a historical view of API calls 
+stored in the database
+-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Spring demo UI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<link href="styles.css" rel="stylesheet">
+	<script>
+	async function getArrivals() {
+	    document.getElementById("arrivals").innerHTML = "Please wait...";
+		let response = await fetch(
+	    	"http://localhost:8080/arrivals"
+	    );
+	    let data = await response.text();
+	    document.getElementById("arrivals").innerHTML = data;
+	    return data;
+	}
+	
+	async function getHistory() {
+	    document.getElementById("history").innerHTML = "Please wait...";
+		let response = await fetch(
+	    	"http://localhost:8080/history"
+	    );
+	    let data = await response.text();
+	    document.getElementById("history").innerHTML = JSON.stringify(data);
+	    return data;
+	}
+
+	async function deleteAll() {
+		let response = await fetch(
+	    	"http://localhost:8080/delete"
+	    );
+	}
+
+//getArrivals().then(data => console.log(data));
+
+</script>
+</head>
+<body>
+  <h1>Spring demo</h1>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+	<div>
+		<button type="button" class="btn btn-primary" onclick="getArrivals()">Get arrivals</button>
+	</div>
+	<div id="arrivals">	
+	</div>
+	<div>
+		<button type="button" class="btn btn-primary" onclick="getHistory()">Get history</button>
+	</div>
+	<div id="history">	
+	</div>
+	<div>
+		<button type="button" class="btn btn-primary" id="delete" onclick="deleteAll()">Delete all</button>
+	</div>
+</body>
+</html>
