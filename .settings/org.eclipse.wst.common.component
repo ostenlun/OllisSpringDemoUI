@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="SpringDemoUI">
+            
+    
+    <wb-module deploy-name="OllisSpringDemoUI">
+                        
+        
         <wb-resource deploy-path="/" source-path="/public"/>
-        <property name="context-root" value="SpringDemoUI"/>
+        <property name="context-root" value="OllisSpringDemoUI"/>
+                    
+    
     </wb-module>
+        
+
 </project-modules>

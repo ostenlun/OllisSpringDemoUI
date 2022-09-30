@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Spring demo arrivals history</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<link href="styles.css" rel="stylesheet">
+	<script>
+		async function getHistory() {
+		    document.getElementById("history").innerHTML = "Please wait...";
+			let response = await fetch(
+		    	"http://localhost:8080/history"
+		    );
+		    
+			let data = await response.text();
+		    document.getElementById("history").innerHTML = data;
+		    document.getElementById("delete").innerHTML = "";
+		    return data;
+		}
+	
+		async function deleteAll() {
+			let response = await fetch(
+		    	"http://localhost:8080/deleteAll"
+		    );
+			
+			let data = await response.text();
+		    document.getElementById("delete").innerHTML = data;
+		    document.getElementById("history").innerHTML = "";
+		    return data;
+		}
+	</script>
+	</head>
+	<body>
+	  <h2>Get arrivals history data from the database</h2>
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+		<div>
+			<button type="button" class="btn btn-primary" onclick="getHistory()">Get history</button>
+		</div>
+		<div id="history">	
+		</div>
+		<div>
+			<button type="button" class="btn btn-primary" onclick="deleteAll()">Delete history</button>
+		</div>
+		<div id="delete">
+		</div>
+	</body>
+</html>

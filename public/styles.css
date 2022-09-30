@@ -2,8 +2,9 @@
 
 button {
 	margin: 15px;
+	width: 130px;
 }
 
-textarea {
-	margin: 15px;
+body {
+	margin: 25px;
 }
