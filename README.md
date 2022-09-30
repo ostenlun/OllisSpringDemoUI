@@ -3,15 +3,6 @@ Simple UI for OllisSpringDemo application
 
 > Live demo TBA [_here_].
 
-## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Features](#features)
-* [Usage](#usage)
-* [Project Status](#project-status)
-* [Contact](#contact)
-* [License](#license)
-
 ## General Information
 This is a simple HTML frontend for using OllisSpringDemo application (https://github.com/ostenlun/OllisSpringDemo).
 
