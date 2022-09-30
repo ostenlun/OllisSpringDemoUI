@@ -9,7 +9,6 @@ Simple UI for OllisSpringDemo application
 * [Features](#features)
 * [Usage](#usage)
 * [Project Status](#project-status)
-* [Acknowledgements](#acknowledgements)
 * [Contact](#contact)
 * [License](#license)
 
