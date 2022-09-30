@@ -1,5 +1,5 @@
 # OllisSpringDemoUI
-Simple UI for OllisSpringDemo application (link)
+Simple UI for OllisSpringDemo application
 
 > Live demo TBA [_here_].
 
@@ -11,29 +11,21 @@ Simple UI for OllisSpringDemo application (link)
 * [Setup](#setup)
 * [Usage](#usage)
 * [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
 * [Acknowledgements](#acknowledgements)
 * [Contact](#contact)
-<!-- * [License](#license) -->
-
+* [License](#license)
 
 ## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
-
+This is a simple HTML frontend for using OllisSpringDemo application (https://github.com/ostenlun/OllisSpringDemo).
 
 ## Technologies Used
 - Html
 
 ## Features
 List the ready features here:
-- Get arrivals
-Gets arrivals by calling...
-- Awesome feature 2
-- Awesome feature 3
+- Get arrivals retrieves the bus arrivals for a certain bus stop in London by calling a Tfl API and stores the data to a remote database.
+- Get history retrieves the arrivals stored in the database
+- Delete history deletes all arrivals stored in the database
 
 ## Screenshots
 TBA
@@ -46,7 +38,7 @@ Proceed to describe how to install / setup one's local environment / get started
 
 
 ## Usage
-Start with index.html page and browse from there to arrivals and history pages as you wish.
+Open index.html page in browser and continue from there to arrivals and history pages as you wish.
 
 ## Project Status
 Project is: _complete_
@@ -54,7 +46,5 @@ Project is: _complete_
 ## Contact
 Created by [@ostenlun](https://www.codeheaven.one/) - feel free to contact me!
 
-
 ## License
 This project is open source and available under the [MIT License]().
-
